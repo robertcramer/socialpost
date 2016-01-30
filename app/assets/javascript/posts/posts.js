@@ -33,3 +33,7 @@ o.get = function(id) {
         return res.data;
     });
 };
+
+o.addComment = function(id, comment) {
+    return $http.post('/posts/' + id + '/comments.json', comment);
+};
